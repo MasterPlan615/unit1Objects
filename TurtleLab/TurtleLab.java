@@ -7,6 +7,8 @@ public class TurtleLab
         World turtleWorld = new World();
         Turtle turtle = new Turtle(turtleWorld);
         Turtle rupert = new Turtle(turtleWorld);
+        turtle.setName("Admiral Mimu");
+        rupert.setName("Sir Rupert Robbington");
         turtle.setShellColor(Color.YELLOW);
         turtle.setBodyColor(Color.GREEN);
         turtle.setPenWidth(5);
@@ -109,6 +111,29 @@ public class TurtleLab
         turtle.turn(-135);
         turtle.forward(200);
         turtle.turn(45);
-        
+        turtle.penUp();
+        turtle.turn(180);
+        turtle.forward(300);
+        rupert.forward(575);
+        rupert.turn(-90);
+        rupert.forward(62);
+        turtle.penDown();
+        turtle.setPenColor(Color.BLACK);
+        int x = 0;
+        while ( x != 1 ) {
+            turtle.setPenWidth(10);
+            turtle.setPenColor(Color.BLUE);
+            turtle.forward(70);
+            turtle.turn(135);
+            turtle.setPenColor(Color.ORANGE);
+            turtle.forward(120);
+            turtle.turn(155);
+            turtle.setPenColor(Color.GREEN);
+            turtle.forward(140);
+            turtle.turn(145);
+            turtle.setPenColor(Color.RED);
+            turtle.forward(140);
+            x += 1;
+        }
     }
 }
