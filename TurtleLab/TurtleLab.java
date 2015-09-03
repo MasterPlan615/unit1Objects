@@ -1,4 +1,5 @@
 import java.awt.Color;
+import java.util.Random;
 
 public class TurtleLab
 {
@@ -102,6 +103,7 @@ public class TurtleLab
         rupert.turn(-90);
         turtle.turn(-90);
         turtle.forward(62);
+        rupert.penUp();
         rupert.forward(62);
         turtle.penUp();
         turtle.turn(180);
@@ -116,12 +118,17 @@ public class TurtleLab
         turtle.forward(300);
         rupert.forward(575);
         rupert.turn(-90);
-        rupert.forward(62);
+        rupert.forward(500);
         turtle.penDown();
         turtle.setPenColor(Color.BLACK);
+        Random forward1 = new Random();
+        Random turn1 = new Random();
+        Random forward2 = new Random();
+        Random turn2 = new Random();
         int x = 0;
-        while ( x != 1 ) {
+        while ( x != 50 ) {
             turtle.setPenWidth(10);
+            turtle.penDown();
             turtle.setPenColor(Color.BLUE);
             turtle.forward(70);
             turtle.turn(135);
@@ -133,6 +140,20 @@ public class TurtleLab
             turtle.turn(145);
             turtle.setPenColor(Color.RED);
             turtle.forward(140);
+            turtle.setPenColor(Color.BLACK);
+            turtle.turn(154);
+            turtle.forward(115);
+            turtle.penUp();
+            int forValue1 = forward1.nextInt( 50 );
+            int turnValue1 = turn1.nextInt( 180 );
+            int forValue2 = forward2.nextInt( 50 );
+            int turnValue2 = turn2.nextInt( 180 );
+            turtle.turnToFace(rupert);
+            turtle.forward(forValue1);
+            rupert.penUp();
+            rupert.turn(turnValue1);
+            rupert.forward(forValue2);
+            rupert.turn(turnValue2);
             x += 1;
         }
     }
